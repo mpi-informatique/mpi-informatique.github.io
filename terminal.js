@@ -12,6 +12,7 @@
   let draft = '';
   let matches = [];
   let selected = 0;
+  let selectedByArrow = false;
 
   function closeSuggestions() {
     list.hidden = true;
@@ -28,6 +29,7 @@
     matches = cd ? sites.filter(site => site.name.startsWith((cd[1] || '').replace(/^\.\//, '').replace(/\/$/, ''))).map(site => ({ value: `cd ${site.name}/`, name: `${site.name}/`, description: site.description })) : value && !value.includes(' ') ? commands.filter(command => command.startsWith(value) && command !== value).map(command => ({ value: command === 'cd' ? 'cd ' : command, name: command, description: 'commande' })) : [];
     list.replaceChildren();
     selected = 0;
+    selectedByArrow = false;
     if (!matches.length) { closeSuggestions(); return; }
     for (const [index, match] of matches.entries()) {
       const option = document.createElement('div');
@@ -92,7 +94,7 @@
     if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
       event.preventDefault();
       const direction = event.key === 'ArrowDown' ? 1 : -1;
-      if (!list.hidden) { selected = (selected + direction + matches.length) % matches.length; updateSelection(); return; }
+      if (!list.hidden) { selected = (selected + direction + matches.length) % matches.length; selectedByArrow = true; updateSelection(); return; }
       if (historyIndex === entries.length) draft = input.value;
       historyIndex = Math.max(0, Math.min(entries.length, historyIndex + direction));
       input.value = historyIndex === entries.length ? draft : entries[historyIndex];
@@ -104,7 +106,7 @@
     const text = input.value.trim();
     // Preserve explicit commands; use the selected site only while choosing a directory.
     const completeSite = sites.some(site => text === `cd ${site.name}` || text === `cd ${site.name}/`);
-    execute(!list.hidden && /^cd(?:\s|$)/.test(text) && !completeSite ? matches[selected].value : input.value);
+    execute(!list.hidden && /^cd(?:\s|$)/.test(text) && (!completeSite || selectedByArrow) ? matches[selected].value : input.value);
   });
   document.addEventListener('click', event => { if (!form.contains(event.target)) closeSuggestions(); });
 })();
