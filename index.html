@@ -16,8 +16,8 @@
     <header class="titlebar"><span class="lights" aria-hidden="true"><i></i><i></i><i></i></span><h1>mpi@informatique <span>— ~/sites</span></h1><span class="shell-label">mpi-shell</span></header>
     <div class="screen">
       <div class="welcome"><p class="wordmark">MPI<span>_</span></p><p>Cours & exercices d'informatique<span class="muted"> / MP2I · MPI</span></p><p class="muted">Bienvenue. Tous les chemins mènent à un exercice.</p></div>
-      <div id="history" aria-label="Historique du terminal">
-        <div class="command-line"><span class="prompt"><span>mpi@informatique</span>:<span class="path">~/sites</span>$</span><span>ls</span></div>
+      <div id="overview" aria-label="Arborescence permanente">
+        <div class="command-line"><span class="prompt"><span>mpi@informatique</span>:<span class="path">~/sites</span>$</span><span>tree</span></div>
         <nav class="directories" aria-label="Sites disponibles">
           <a href="https://mpi-informatique.github.io/cours/" data-path="cours/mpi"><span class="directory">cours/mpi</span><span class="description">Cours, TP et devoirs de MPI</span></a>
           <a href="https://mp2i-info.github.io/" data-path="cours/mp2i"><span class="directory">cours/mp2i</span><span class="description">Cours d'informatique de MP2I</span></a>
@@ -29,6 +29,7 @@
           <a href="https://github.com/mpi-informatique/tp-environnement" data-path="programmation/tp"><span class="directory">programmation/tp</span><span class="description">Environnement de TP & mode d'emploi</span></a>
         </nav>
       </div>
+      <div id="history" aria-label="Historique du terminal" role="log"></div>
       <form id="command-form" autocomplete="off">
         <div class="command-line input-line"><label class="prompt" for="command"><span>mpi@informatique</span>:<span class="path">~/sites</span>$<span class="sr-only"> Commande</span></label><input id="command" type="text" role="combobox" aria-label="Commande du terminal" aria-autocomplete="list" aria-expanded="false" aria-controls="suggestions" autocapitalize="off" spellcheck="false" placeholder="cd cours/" autofocus><button class="run" type="submit" aria-label="Exécuter la commande" title="Exécuter la commande">↵</button></div>
         <div id="suggestions" role="listbox" aria-label="Complétion des sites" hidden></div>

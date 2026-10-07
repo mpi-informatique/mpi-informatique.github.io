@@ -2,6 +2,7 @@
   const input = document.querySelector('#command');
   const form = document.querySelector('#command-form');
   const history = document.querySelector('#history');
+  const overview = document.querySelector('#overview');
   const list = document.querySelector('#suggestions');
   const feedback = document.querySelector('#feedback');
   const root = { description: 'Tous les sites', children: {} };
@@ -49,7 +50,7 @@
     else for (const [name, child] of Object.entries(node.children)) nav.append(siteLink(name, child, [...parts, name]));
     history.append(nav);
   }
-  function showTree(parts = cwd) {
+  function showTree(parts = cwd, target = history) {
     const node = getNode(parts);
     if (!node) { print('tree : répertoire introuvable.'); return; }
     const tree = document.createElement('div'); tree.className = 'tree'; tree.setAttribute('aria-label', 'Arborescence de ' + pathText(parts));
@@ -65,9 +66,9 @@
       });
     }
     if (node.url) tree.append(siteLink(parts.at(-1), node, parts)); else visit(node, parts);
-    history.append(tree);
+    target.append(tree);
   }
-  const entries = ['ls'];
+  const entries = ['tree'];
   let historyIndex = entries.length;
   let draft = '';
   let matches = [];
@@ -151,7 +152,7 @@
       default: print(`${command} : commande introuvable. Même en MPI, on ne peut pas tout inventer. Essayer help.`);
     }
     input.focus({ preventScroll: true });
-    form.scrollIntoView({ block: 'nearest', behavior: 'instant' });
+    history.scrollTop = history.scrollHeight;
   }
   input.addEventListener('input', suggest);
   input.addEventListener('keydown', event => {
@@ -187,8 +188,9 @@
     if (parts.join('/') === cwd.join('/')) return;
     cwd = parts; updatePrompt(); closeSuggestions(); printCommand('ls'); showListing();
   }
-  history.replaceChildren();
-  updatePrompt(); printCommand('ls'); showListing(); restorePath();
+  overview.querySelector('.directories').remove();
+  showTree([], overview);
+  updatePrompt(); restorePath();
   window.addEventListener('popstate', restorePath);
   window.addEventListener('hashchange', restorePath);
   document.addEventListener('click', event => { if (!form.contains(event.target)) closeSuggestions(); });
