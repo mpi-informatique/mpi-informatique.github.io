@@ -19,21 +19,23 @@
       <div id="history" aria-label="Historique du terminal">
         <div class="command-line"><span class="prompt"><span>mpi@informatique</span>:<span class="path">~/sites</span>$</span><span>ls</span></div>
         <nav class="directories" aria-label="Sites disponibles">
-          <a href="https://mpi-lamartin.github.io/mpi-info/" data-name="cours"><span class="directory">cours/</span><span class="description">Cours, TP et devoirs de MPI</span></a>
-          <a href="https://mpi-informatique.github.io/ocaml/" data-name="ocaml"><span class="directory">ocaml/</span><span class="description">Programmation fonctionnelle</span></a>
-          <a href="https://mpi-informatique.github.io/c/" data-name="c"><span class="directory">c/</span><span class="description">Programmation en C</span></a>
-          <a href="https://mpi-informatique.github.io/sql/" data-name="sql"><span class="directory">sql/</span><span class="description">Bases de données</span></a>
-          <a href="https://mpi-informatique.github.io/automates/" data-name="automates"><span class="directory">automates/</span><span class="description">Automates & langages</span></a>
-          <a href="https://mpi-informatique.github.io/deduction-naturelle/" data-name="deduction-naturelle"><span class="directory">deduction-naturelle/</span><span class="description">Logique & arbres de preuve</span></a>
+          <a href="https://mpi-informatique.github.io/cours/" data-path="cours/mpi"><span class="directory">cours/mpi</span><span class="description">Cours, TP et devoirs de MPI</span></a>
+          <a href="https://mp2i-info.github.io/" data-path="cours/mp2i"><span class="directory">cours/mp2i</span><span class="description">Cours d'informatique de MP2I</span></a>
+          <a href="https://mpi-informatique.github.io/automates/" data-path="exercices/automates"><span class="directory">exercices/automates</span><span class="description">Automates & langages</span></a>
+          <a href="https://mpi-informatique.github.io/deduction-naturelle/" data-path="exercices/deduction-naturelle"><span class="directory">exercices/deduction-naturelle</span><span class="description">Logique & arbres de preuve</span></a>
+          <a href="https://mpi-informatique.github.io/ocaml/" data-path="programmation/ocaml"><span class="directory">programmation/ocaml</span><span class="description">Programmation fonctionnelle</span></a>
+          <a href="https://mpi-informatique.github.io/c/" data-path="programmation/c"><span class="directory">programmation/c</span><span class="description">Programmation en C</span></a>
+          <a href="https://mpi-informatique.github.io/sql/" data-path="programmation/sql"><span class="directory">programmation/sql</span><span class="description">Bases de données</span></a>
+          <a href="https://github.com/mpi-informatique/tp-environnement" data-path="programmation/tp"><span class="directory">programmation/tp</span><span class="description">Environnement de TP & mode d'emploi</span></a>
         </nav>
       </div>
       <form id="command-form" autocomplete="off">
-        <div class="command-line input-line"><label class="prompt" for="command"><span>mpi@informatique</span>:<span class="path">~/sites</span>$<span class="sr-only"> Commande</span></label><input id="command" type="text" role="combobox" aria-label="Commande du terminal" aria-autocomplete="list" aria-expanded="false" aria-controls="suggestions" autocapitalize="off" spellcheck="false" placeholder="cd ocaml" autofocus><button class="run" type="submit" aria-label="Exécuter la commande" title="Exécuter la commande">↵</button></div>
+        <div class="command-line input-line"><label class="prompt" for="command"><span>mpi@informatique</span>:<span class="path">~/sites</span>$<span class="sr-only"> Commande</span></label><input id="command" type="text" role="combobox" aria-label="Commande du terminal" aria-autocomplete="list" aria-expanded="false" aria-controls="suggestions" autocapitalize="off" spellcheck="false" placeholder="cd cours/" autofocus><button class="run" type="submit" aria-label="Exécuter la commande" title="Exécuter la commande">↵</button></div>
         <div id="suggestions" role="listbox" aria-label="Complétion des sites" hidden></div>
       </form>
       <p id="feedback" class="sr-only" role="status" aria-live="polite"></p>
       <noscript><p class="muted">Les sites restent accessibles en cliquant sur leur nom. Activer JavaScript pour utiliser les commandes.</p></noscript>
-      <div class="hint"><span><kbd>Tab</kbd> compléter</span><span><kbd>↑</kbd><kbd>↓</kbd> choisir</span><span><kbd>Entrée</kbd> ouvrir</span><span><code>help</code> aide</span></div>
+      <div class="hint"><span><kbd>Tab</kbd> compléter</span><span><kbd>↑</kbd><kbd>↓</kbd> choisir</span><span><kbd>Entrée</kbd> ouvrir</span><span><code>tree</code> arborescence</span><span><code>help</code> aide</span></div>
     </div>
     <footer><span>Quentin Fortier <span class="footer-sep">/</span> Informatique en CPGE</span><a href="https://github.com/mpi-informatique">GitHub</a></footer>
   </main>
