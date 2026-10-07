@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap><loc>https://mpi-informatique.github.io/accueil-sitemap.xml</loc></sitemap>
+  <sitemap><loc>https://mpi-informatique.github.io/sql/sitemap.xml</loc></sitemap>
+  <sitemap><loc>https://mpi-informatique.github.io/ocaml/sitemap.xml</loc></sitemap>
+  <sitemap><loc>https://mpi-informatique.github.io/c/sitemap.xml</loc></sitemap>
+  <sitemap><loc>https://mpi-informatique.github.io/automates/sitemap.xml</loc></sitemap>
+  <sitemap><loc>https://mpi-informatique.github.io/deduction-naturelle/sitemap.xml</loc></sitemap>
+  <sitemap><loc>https://mpi-informatique.github.io/cours/sitemap.xml</loc></sitemap>
+</sitemapindex>
