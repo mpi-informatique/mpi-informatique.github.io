@@ -4,4 +4,23 @@ Accueil : https://mpi-informatique.github.io/.
 
 Terminal statique, sans dépendance : `index.html`, `style.css`, `terminal.js` et `favicon.svg`. Publication sur GitHub Pages depuis `main`.
 
-`ls` est affiché au démarrage. Les répertoires sont aussi de vrais liens, utilisables sans JavaScript. `cd` ouvre un site, avec suggestions, complétion par Tab et sélection par les flèches. Les flèches parcourent l'historique hors complétion. `help` et `clear` complètent les commandes humoristiques `man`, `rm`, `cp` et `mv`.
+`ls` affiche le dossier courant. `tree` affiche une arborescence cliquable. `cd` parcourt les dossiers et ouvre les sites, avec complétion des chemins par Tab et sélection par les flèches. `cd ..` remonte d'un niveau, `cd /` revient à la racine et `pwd` affiche le chemin courant. Les boutons précédent/suivant du navigateur retrouvent les dossiers visités.
+
+```text
+~/sites
+├── cours/
+│   ├── mpi
+│   └── mp2i
+├── exercices/
+│   ├── automates
+│   └── deduction-naturelle
+└── programmation/
+    ├── ocaml
+    ├── c
+    ├── sql
+    └── tp
+```
+
+Les destinations sont définies par les liens `data-path` d'`index.html`, qui restent utilisables sans JavaScript. Les dossiers sont construits à partir de ces liens. `programmation/tp` ouvre le dépôt et son mode d'emploi. `cours/mp2i` ouvre le site existant, sans migration.
+
+`help` et `clear` complètent les commandes humoristiques `man`, `rm`, `cp` et `mv`.
