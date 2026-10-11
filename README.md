@@ -34,3 +34,7 @@ Les destinations sont définies par les liens `data-path` d'`index.html`, qui re
 Les titres, descriptions, adresses canoniques et données structurées décrivent le contenu réel. Les liens vers les sites existent dans le HTML initial et restent accessibles sans JavaScript. Conserver la balise `google-site-verification` pour maintenir la vérification Search Console.
 
 Après l'ajout d'un nouveau site, ajouter son sitemap à l'index. Ne pas ajouter le dépôt GitHub des TP ou le domaine externe MP2I à cet index : ils ne sont pas hébergés sous ce domaine.
+
+## Ancienne adresse de la banque
+
+`enseignement/index.html` et `404.html` chargent `enseignement-redirect.js` pour rediriger `/enseignement/` et ses anciennes pages vers `/exercices/`, en conservant le chemin, les paramètres et le fragment. Les autres chemins inconnus restent des pages 404. Le dépôt de la banque est désormais [exercices](https://github.com/mpi-informatique/exercices).
