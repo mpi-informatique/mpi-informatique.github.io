@@ -14,6 +14,7 @@ La première commande, `tree`, affiche l'arborescence dans un panneau permanent,
 │   ├── mpi
 │   └── mp2i
 ├── exercices/
+│   ├── banque
 │   ├── automates
 │   └── deduction-naturelle
 └── programmation/
@@ -23,6 +24,8 @@ La première commande, `tree`, affiche l'arborescence dans un panneau permanent,
     └── tp
 ```
 
+`exercices/banque` ouvre la banque d’exercices de MP2I et MPI à l’adresse https://mpi-informatique.github.io/exercices/.
+
 Les destinations sont définies par les liens `data-path` d'`index.html`, qui restent utilisables sans JavaScript. Les dossiers sont construits à partir de ces liens. `programmation/tp` ouvre le dépôt et son mode d'emploi. `cours/mp2i` ouvre le site existant, sans migration.
 
 `help` et `clear` complètent les commandes humoristiques `man`, `rm`, `cp` et `mv`.
@@ -31,7 +34,7 @@ Les destinations sont définies par les liens `data-path` d'`index.html`, qui re
 
 `favicon.png` est une copie de `cours/static/img/favicon.png` (144 × 144 pixels). L'accueil déclare cette icône pour que Google l'utilise aussi pour `/cours/` : Google ne distingue pas les favicons des sous-répertoires d'un même domaine. Conserver cette copie identique au favicon du cours lors d'un changement d'icône.
 
-`robots.txt` à la racine du domaine autorise l'exploration et indique `sitemap.xml`, un index réunissant les sitemaps de l'accueil et des six sites. Le cours génère ses URL de pages automatiquement avec Docusaurus ; les applications interactives ont chacune une URL d'entrée canonique. Les chemins virtuels du terminal et les états des exercices ne sont pas des pages distinctes à indexer.
+`robots.txt` à la racine du domaine autorise l'exploration et indique `sitemap.xml`, un index réunissant les sitemaps de l'accueil et des sept sites. `banque-sitemap.xml` référence la page d’accueil de la banque d’exercices. Le cours génère ses URL de pages automatiquement avec Docusaurus ; les applications interactives ont chacune une URL d'entrée canonique. Les chemins virtuels du terminal et les états des exercices ne sont pas des pages distinctes à indexer.
 
 Les titres, descriptions, adresses canoniques et données structurées décrivent le contenu réel. Les liens vers les sites existent dans le HTML initial et restent accessibles sans JavaScript. Conserver la balise `google-site-verification` pour maintenir la vérification Search Console.
 

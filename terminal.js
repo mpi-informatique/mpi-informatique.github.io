@@ -6,7 +6,7 @@
   const list = document.querySelector('#suggestions');
   const feedback = document.querySelector('#feedback');
   const root = { description: 'Tous les sites', children: {} };
-  const descriptions = { cours: 'Cours de MPI et MP2I', exercices: 'Automates, langages et logique', programmation: 'OCaml, C, SQL et environnement de TP' };
+  const descriptions = { cours: 'Cours de MPI et MP2I', exercices: 'Banque d’exercices, automates, langages et logique', programmation: 'OCaml, C, SQL et environnement de TP' };
   for (const link of document.querySelectorAll('.directories a')) {
     const parts = link.dataset.path.split('/');
     let node = root;
