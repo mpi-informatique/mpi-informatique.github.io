@@ -2,7 +2,7 @@
 
 Accueil : https://mpi-informatique.github.io/.
 
-Terminal statique, sans dépendance : `index.html`, `style.css`, `terminal.js` et `favicon.svg`. Publication sur GitHub Pages depuis `main`.
+Terminal statique, sans dépendance : `index.html`, `style.css`, `terminal.js` et `favicon.png`. Publication sur GitHub Pages depuis `main`.
 
 La première commande, `tree`, affiche l'arborescence dans un panneau permanent, conservé même après `clear`. L'historique des commandes défile séparément. Le terminal occupe 80 % de la largeur sur ordinateur.
 
@@ -28,6 +28,8 @@ Les destinations sont définies par les liens `data-path` d'`index.html`, qui re
 `help` et `clear` complètent les commandes humoristiques `man`, `rm`, `cp` et `mv`.
 
 ## Référencement
+
+`favicon.png` est une copie de `cours/static/img/favicon.png` (144 × 144 pixels). L'accueil déclare cette icône pour que Google l'utilise aussi pour `/cours/` : Google ne distingue pas les favicons des sous-répertoires d'un même domaine. Conserver cette copie identique au favicon du cours lors d'un changement d'icône.
 
 `robots.txt` à la racine du domaine autorise l'exploration et indique `sitemap.xml`, un index réunissant les sitemaps de l'accueil et des six sites. Le cours génère ses URL de pages automatiquement avec Docusaurus ; les applications interactives ont chacune une URL d'entrée canonique. Les chemins virtuels du terminal et les états des exercices ne sont pas des pages distinctes à indexer.
 
