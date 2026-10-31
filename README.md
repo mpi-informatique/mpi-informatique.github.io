@@ -34,7 +34,7 @@ Les destinations sont définies par les liens `data-path` d'`index.html`, qui re
 
 `favicon.png` est une copie de `cours/static/img/favicon.png` (144 × 144 pixels). L'accueil déclare cette icône pour que Google l'utilise aussi pour `/cours/` : Google ne distingue pas les favicons des sous-répertoires d'un même domaine. Conserver cette copie identique au favicon du cours lors d'un changement d'icône.
 
-`robots.txt` à la racine du domaine autorise l'exploration et indique `sitemap.xml`, un index réunissant les sitemaps de l'accueil et des sept sites. `banque-sitemap.xml` référence la page d’accueil de la banque d’exercices. Le cours génère ses URL de pages automatiquement avec Docusaurus ; les applications interactives ont chacune une URL d'entrée canonique. Les chemins virtuels du terminal et les états des exercices ne sont pas des pages distinctes à indexer.
+`robots.txt` à la racine du domaine autorise l'exploration et indique `sitemap.xml`, un index réunissant les sitemaps de l'accueil et des sept sites. La banque génère `exercices/sitemap-0.xml` automatiquement avec Astro, à partir de son catalogue public ; référencer ce fichier plutôt que son index pour ne pas imbriquer les index de sitemaps. Le cours génère ses URL de pages automatiquement avec Docusaurus ; les applications interactives ont chacune une URL d'entrée canonique. Les chemins virtuels du terminal et les états des exercices ne sont pas des pages distinctes à indexer.
 
 Les titres, descriptions, adresses canoniques et données structurées décrivent le contenu réel. Les liens vers les sites existent dans le HTML initial et restent accessibles sans JavaScript. Conserver la balise `google-site-verification` pour maintenir la vérification Search Console.
 
