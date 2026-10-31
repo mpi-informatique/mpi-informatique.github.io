@@ -14,7 +14,7 @@ La première commande, `tree`, affiche l'arborescence dans un panneau permanent,
 │   ├── mpi
 │   └── mp2i
 ├── exercices/
-│   ├── typst
+│   ├── banque
 │   ├── automates
 │   └── deduction-naturelle
 └── programmation/
@@ -24,7 +24,7 @@ La première commande, `tree`, affiche l'arborescence dans un panneau permanent,
     └── tp
 ```
 
-`exercices/typst` ouvre la banque d’exercices de MP2I et MPI à l’adresse https://mpi-informatique.github.io/exercices/.
+`exercices/banque` ouvre la banque d’exercices de MP2I et MPI à l’adresse https://mpi-informatique.github.io/exercices/.
 
 Les destinations sont définies par les liens `data-path` d'`index.html`, qui restent utilisables sans JavaScript. Les dossiers sont construits à partir de ces liens. `programmation/tp` ouvre le dépôt et son mode d'emploi. `cours/mp2i` ouvre le site existant, sans migration.
 
